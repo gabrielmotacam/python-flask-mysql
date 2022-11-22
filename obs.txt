@@ -1,0 +1,7 @@
+https://www.folkstalk.com/2022/09/mysql-create-user-with-remote-access-with-code-examples.html
+
+pesquisar sobre acesso ao mysql remotamente
+acessar mysql em container
+
+Mysql Remote connection 
+https://phoenixnap.com/kb/mysql-remote-connection
