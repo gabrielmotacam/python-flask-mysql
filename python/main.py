@@ -6,11 +6,13 @@ from db import Users
 
 
 mydb = mysql.connector.connect(
-    host='localhost',
-    user='MainUser',
-    password='MainPassword',
-    database='Pycodebr'
+    user='root',
+    password='root',
+    host='mysql',
+    port="3306",
+    database='db'
 )
+print("DB connected")
 
 app = Flask(__name__)
 

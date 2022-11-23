@@ -1,4 +1,4 @@
-USE Pycodebr;
+USE db;
 
 CREATE TABLE users (
     id integer not null auto_increment,
