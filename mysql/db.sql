@@ -1,5 +1,8 @@
 USE db;
 
+-- CREATE USER MyUser@localhost IDENTIFIED BY 'MainPassword';
+-- grant all privileges on *.* to MyUser@localhost with grant option;
+
 CREATE TABLE users (
     id integer not null auto_increment,
     naame varchar(100),

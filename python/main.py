@@ -1,4 +1,7 @@
 # https://www.youtube.com/watch?v=LP8besicfH4
+# mysql denied
+# https://stackoverflow.com/questions/10299148/mysql-error-1045-28000-access-denied-for-user-billlocalhost-using-passw
+
 
 import mysql.connector 
 from flask import Flask, make_response, jsonify, request
@@ -6,11 +9,11 @@ from db import Users
 
 
 mydb = mysql.connector.connect(
+    host='mysql',
     user='root',
     password='root',
-    host='mysql',
-    port="3306",
     database='db'
+    port='3306'
 )
 print("DB connected")
 
@@ -20,6 +23,13 @@ app.config['JSON_SORT_KEYS'] = False
 
 @app.route('/users', methods=['GET'])
 def get_users():
+
+    my_cursor = mydb.cursor()
+    my_cursor.execute('SELECT * FROM users')
+    my_users = my_cursor.fetchall()
+
+    print(my_users)
+
     return make_response(
         jsonify(Users)
     )
